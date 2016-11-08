@@ -1,0 +1,80 @@
+/*Felipe José de Sousa Vasconcelos
+Date: 08/11/2016
+Exercícios capítulo Estrutura de Dados: Objeto e Array*/
+//**************************************************************************************************************************************
+//1. A soma de um intervalo
+
+function range_(start,end,inc) {
+  var vetor=[];	
+  
+	if (arguments.length == 2 && start<end) inc = 1;
+	else if (arguments.length == 2 && start>end) inc = -1;
+
+	for(var count=0; ; count++){
+		vetor[count]=start;
+		start+=inc;
+
+		if (inc>0 && vetor[count]>=end) {
+			if (vetor[count]>end) vetor.pop();
+			break;
+		}
+
+		if (inc<0 && vetor[count]<=end) {
+			if (vetor[count]<end) vetor.pop();
+			break;
+		}  
+	}		
+  return vetor;
+}
+
+function sum_(vetor) {
+	var soma = 0;	  
+
+	for(var count=0;count<vetor.length ; count++) soma+=vetor[count];
+	
+  return soma;
+}
+
+console.log(range_(1, 17,3));
+console.log(sum_(range_(1, 17,3))); //  55
+console.log(range_(5, 2, -1));      //  [5, 4, 3, 2]
+
+//**************************************************************************************************************************************
+//2. Invertendo um array
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
