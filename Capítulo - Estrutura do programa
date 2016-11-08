@@ -1,0 +1,38 @@
+/*Felipe José de Sousa Vasconcelos
+Date: 08/11/2016
+Exercícios capítulo Estrutura do programa*/
+//**************************************************************************************************************************************
+//1. Criando um Triângulo com Loop
+
+var has = "";
+for (var cont = 0;cont<6 ;cont++) {
+  has += "#";
+	console.log(has);
+}
+//**************************************************************************************************************************************
+//2. FizzBuzz
+
+for (var cont = 1;cont<100 ;cont++) {			
+	if ((cont%3 == 0) && (cont%5==0))
+		console.log("FizzBuzz");
+	else if (cont%3 == 0) 
+		console.log("Buzz");
+	else if (cont%5 == 0) 
+		console.log("Fizz");
+	else		
+		console.log(cont);
+}
+//**************************************************************************************************************************************
+//2. Tabuleiro de Xadrez
+
+var size = 8;
+
+for (var i = 0; i < size; i++) {
+  var text = i % 2 === 0 ? '' : ' ',
+      j    = 0;
+  do {
+    text += '# ';
+  } while (j++ < (size / 2));
+
+  console.log(text)
+}
