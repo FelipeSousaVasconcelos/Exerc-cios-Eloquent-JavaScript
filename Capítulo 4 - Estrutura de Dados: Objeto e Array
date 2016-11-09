@@ -42,39 +42,35 @@ console.log(range_(5, 2, -1));      //  [5, 4, 3, 2]
 //**************************************************************************************************************************************
 //2. Invertendo um array
 
+function reverseArray(vetor) {
+	var vetor2 = [];	  
 
+	for(var count=0;count<=vetor.length ; count++) vetor2.unshift(vetor[count]);
+	
+  return vetor2;
+}
 
+function reverseArrayInPlace(vetor) {
+	var aux, aux2;
+	var aux3 = vetor.length-1;
+	
+	if (vetor.length%2 == 0) aux2 = vetor.length/2;
+	else aux2 = Math.floor(vetor.length/2);
+	
+	for(var count=0;count>aux2 ; count++) {
+		aux = vetor[count];
+		vetor[count] = vetor[aux3];
+		vetor[aux3] = aux;
+		aux3--;
+	}	
+	
+  return vetor;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(reverseArray(["A", "B", "C"]));
+// → ["C", "B", "A"];
+var arrayValue = [1, 2, 3, 4, 5];
+reverseArrayInPlace(arrayValue);
+console.log(arrayValue);
+// → [5, 4, 3, 2, 1]
 
