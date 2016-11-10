@@ -45,7 +45,7 @@ console.log(range_(5, 2, -1));      //  [5, 4, 3, 2]
 function reverseArray(vetor) {
 	var vetor2 = [];	  
 
-	for(var count=0;count<=vetor.length ; count++) vetor2.unshift(vetor[count]);
+	for(var count=0;count<vetor.length ; count++) vetor2.unshift(vetor[count]);
 	
   return vetor2;
 }
@@ -57,7 +57,7 @@ function reverseArrayInPlace(vetor) {
 	if (vetor.length%2 == 0) aux2 = vetor.length/2;
 	else aux2 = Math.floor(vetor.length/2);
 	
-	for(var count=0;count>aux2 ; count++) {
+	for(var count=0;count<aux2 ; count++) {
 		aux = vetor[count];
 		vetor[count] = vetor[aux3];
 		vetor[aux3] = aux;
@@ -73,4 +73,6 @@ var arrayValue = [1, 2, 3, 4, 5];
 reverseArrayInPlace(arrayValue);
 console.log(arrayValue);
 // → [5, 4, 3, 2, 1]
+//**************************************************************************************************************************************
+//3. A lista
 
