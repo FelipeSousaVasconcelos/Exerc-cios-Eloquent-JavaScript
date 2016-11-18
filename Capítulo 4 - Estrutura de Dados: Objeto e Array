@@ -134,3 +134,43 @@ console.log(nth(arrayToList([-10, 20, 30]),1));
 // → 20
 console.log(nth_recur(arrayToList([-10, 20, 30]),1));
 // → 20
+//**************************************************************************************************************************************
+//3. Deep comparison
+
+function deepEqual(x, y) {
+	var aux1=0, aux2=0;
+	
+	if((typeof x != "object") || (typeof y != "object") || x == null || y == null){
+		if(x === y) return true;
+		else return false;
+	}
+	
+	for (var prop in x) aux1++;
+	
+	for (var prop in y) {
+	aux2++;
+	if (!(prop in x) || !deepEqual(x[prop], y[prop]))
+      	return false;
+	}
+		
+  return aux1 == aux2;
+}
+
+var obj = {here: {is: "an"}, object: 2};
+console.log(deepEqual(obj, obj));
+// → true
+console.log(deepEqual(obj, {here: 1, object: 2}));
+// → false
+console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
+// → true
+
+
+
+
+
+
+
+
+
+
+
