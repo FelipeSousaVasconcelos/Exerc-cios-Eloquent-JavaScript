@@ -1,0 +1,13 @@
+/*Felipe José de Sousa Vasconcelos
+Date: 24/11/2016
+Exercícios capítulo Funções de ordem superior*/
+//**************************************************************************************************************************************
+//1. Juntando
+function juntaVetor(vetor){  
+  return vetor.reduce(function(a,b){return a.concat(b);})
+}
+
+var arrays = [[1, 2, 3], [4, 5], [6], ['a', 'c', 'b']];
+console.log(juntaVetor(arrays));
+
+
